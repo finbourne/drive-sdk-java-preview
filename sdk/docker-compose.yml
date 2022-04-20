@@ -4,8 +4,8 @@ services:
 
   lusid-sdk-java-preview-test:
     build: .
-    container_name: lusid-sdk-java-preview-test
-    image: finbourne/lusid-sdk-java-preview-test
+    container_name: drive-sdk-java-preview-test
+    image: maven:3.8.5-jdk-11
     environment:
       - FBN_TOKEN_URL
       - FBN_USERNAME
@@ -14,5 +14,6 @@ services:
       - FBN_CLIENT_SECRET
       - FBN_LUSID_API_URL
       - FBN_APP_NAME
+      - FBN_DRIVE_API_URL
     volumes:
       - .:/usr/src
