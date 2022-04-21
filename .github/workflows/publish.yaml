@@ -18,7 +18,7 @@ jobs:
       - name: Publish package
         run: |
           cd sdk
-          mvn --batch-mode deploy
+          mvn --batch-mode deploy -P ossrh
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
