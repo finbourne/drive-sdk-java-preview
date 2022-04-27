@@ -5,19 +5,19 @@
     <artifactId>drive-sdk-preview</artifactId>
     <packaging>jar</packaging>
     <name>drive-sdk-preview</name>
-    <version>0.1.328-SNAPSHOT</version>
-    <url>https://github.com/finbourne/drive-sdk-java-preview/</url>
-    <description>Finbourne Drive SDK Preview</description>
+    <version>0.1.349-SNAPSHOT</version>
+    <url>https://github.com/openapitools/openapi-generator</url>
+    <description>OpenAPI Java</description>
     <scm>
-        <connection>git@github.com:finbourne/drive-sdk-extensions-java.git</connection>
-        <developerConnection>git@github.com:finbourne/drive-sdk-extensions-java.git</developerConnection>
-        <url>https://github.com/finbourne/drive-sdk-java-preview/</url>
+        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
+        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
+        <url>https://github.com/openapitools/openapi-generator</url>
     </scm>
 
     <licenses>
         <license>
             <name>MIT</name>
-            <url>https://github.com/finbourne/drive-sdk-java-preview/blob/master/LICENSE</url>
+            <url>https://github.com/finbourne/drive-sdk-java-preview/blob/master/LICENSE.md</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
