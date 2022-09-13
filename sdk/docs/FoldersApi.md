@@ -4,20 +4,20 @@ All URIs are relative to *https://www.lusid.com/drive*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createFolder**](FoldersApi.md#createFolder) | **POST** /api/folders | [BETA] CreateFolder: Create a new folder in LUSID Drive
-[**deleteFolder**](FoldersApi.md#deleteFolder) | **DELETE** /api/folders/{id} | [BETA] DeleteFolder: Delete a specified folder and all subfolders
-[**getFolder**](FoldersApi.md#getFolder) | **GET** /api/folders/{id} | [BETA] GetFolder: Get metadata of folder
-[**getFolderContents**](FoldersApi.md#getFolderContents) | **GET** /api/folders/{id}/contents | [BETA] GetFolderContents: List contents of a folder
-[**getRootFolder**](FoldersApi.md#getRootFolder) | **GET** /api/folders | [BETA] GetRootFolder: List contents of root folder
-[**moveFolder**](FoldersApi.md#moveFolder) | **POST** /api/folders/{id} | [BETA] MoveFolder: Move files to specified folder
-[**updateFolder**](FoldersApi.md#updateFolder) | **PUT** /api/folders/{id} | [BETA] UpdateFolder: Update an existing folder&#39;s name, path
+[**createFolder**](FoldersApi.md#createFolder) | **POST** /api/folders | [EARLY ACCESS] CreateFolder: Create a new folder in LUSID Drive
+[**deleteFolder**](FoldersApi.md#deleteFolder) | **DELETE** /api/folders/{id} | [EARLY ACCESS] DeleteFolder: Delete a specified folder and all subfolders
+[**getFolder**](FoldersApi.md#getFolder) | **GET** /api/folders/{id} | [EARLY ACCESS] GetFolder: Get metadata of folder
+[**getFolderContents**](FoldersApi.md#getFolderContents) | **GET** /api/folders/{id}/contents | [EARLY ACCESS] GetFolderContents: List contents of a folder
+[**getRootFolder**](FoldersApi.md#getRootFolder) | **GET** /api/folders | [EARLY ACCESS] GetRootFolder: List contents of root folder
+[**moveFolder**](FoldersApi.md#moveFolder) | **POST** /api/folders/{id} | [EARLY ACCESS] MoveFolder: Move files to specified folder
+[**updateFolder**](FoldersApi.md#updateFolder) | **PUT** /api/folders/{id} | [EARLY ACCESS] UpdateFolder: Update an existing folder&#39;s name, path
 
 
 <a name="createFolder"></a>
 # **createFolder**
 > StorageObject createFolder(createFolder)
 
-[BETA] CreateFolder: Create a new folder in LUSID Drive
+[EARLY ACCESS] CreateFolder: Create a new folder in LUSID Drive
 
 ### Example
 ```java
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 # **deleteFolder**
 > deleteFolder(id)
 
-[BETA] DeleteFolder: Delete a specified folder and all subfolders
+[EARLY ACCESS] DeleteFolder: Delete a specified folder and all subfolders
 
 ### Example
 ```java
@@ -151,7 +151,7 @@ null (empty response body)
 # **getFolder**
 > StorageObject getFolder(id)
 
-[BETA] GetFolder: Get metadata of folder
+[EARLY ACCESS] GetFolder: Get metadata of folder
 
 ### Example
 ```java
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 # **getFolderContents**
 > PagedResourceListOfStorageObject getFolderContents(id, page, sortBy, start, limit, filter)
 
-[BETA] GetFolderContents: List contents of a folder
+[EARLY ACCESS] GetFolderContents: List contents of a folder
 
 ### Example
 ```java
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 # **getRootFolder**
 > PagedResourceListOfStorageObject getRootFolder(page, sortBy, start, limit, filter)
 
-[BETA] GetRootFolder: List contents of root folder
+[EARLY ACCESS] GetRootFolder: List contents of root folder
 
 ### Example
 ```java
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 # **moveFolder**
 > PagedResourceListOfStorageObject moveFolder(id, requestBody, overwrite, deleteSource)
 
-[BETA] MoveFolder: Move files to specified folder
+[EARLY ACCESS] MoveFolder: Move files to specified folder
 
 ### Example
 ```java
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 # **updateFolder**
 > StorageObject updateFolder(id, updateFolder)
 
-[BETA] UpdateFolder: Update an existing folder&#39;s name, path
+[EARLY ACCESS] UpdateFolder: Update an existing folder&#39;s name, path
 
 ### Example
 ```java

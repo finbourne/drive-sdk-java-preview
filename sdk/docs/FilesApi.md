@@ -4,19 +4,19 @@ All URIs are relative to *https://www.lusid.com/drive*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createFile**](FilesApi.md#createFile) | **POST** /api/files | [BETA] CreateFile: Uploads a file to Lusid Drive. If using an SDK, consider using the UploadAsStreamAsync function for larger files instead.
-[**deleteFile**](FilesApi.md#deleteFile) | **DELETE** /api/files/{id} | [BETA] DeleteFile: Deletes a file from Drive.
-[**downloadFile**](FilesApi.md#downloadFile) | **GET** /api/files/{id}/contents | [BETA] DownloadFile: Download the file from Drive.
-[**getFile**](FilesApi.md#getFile) | **GET** /api/files/{id} | [BETA] GetFile: Get a file stored in Drive.
-[**updateFileContents**](FilesApi.md#updateFileContents) | **PUT** /api/files/{id}/contents | [BETA] UpdateFileContents: Updates contents of a file in Drive.
-[**updateFileMetadata**](FilesApi.md#updateFileMetadata) | **PUT** /api/files/{id} | [BETA] UpdateFileMetadata: Updates metadata for a file in Drive.
+[**createFile**](FilesApi.md#createFile) | **POST** /api/files | [EARLY ACCESS] CreateFile: Uploads a file to Lusid Drive. If using an SDK, consider using the UploadAsStreamAsync function for larger files instead.
+[**deleteFile**](FilesApi.md#deleteFile) | **DELETE** /api/files/{id} | [EARLY ACCESS] DeleteFile: Deletes a file from Drive.
+[**downloadFile**](FilesApi.md#downloadFile) | **GET** /api/files/{id}/contents | [EARLY ACCESS] DownloadFile: Download the file from Drive.
+[**getFile**](FilesApi.md#getFile) | **GET** /api/files/{id} | [EARLY ACCESS] GetFile: Get a file stored in Drive.
+[**updateFileContents**](FilesApi.md#updateFileContents) | **PUT** /api/files/{id}/contents | [EARLY ACCESS] UpdateFileContents: Updates contents of a file in Drive.
+[**updateFileMetadata**](FilesApi.md#updateFileMetadata) | **PUT** /api/files/{id} | [EARLY ACCESS] UpdateFileMetadata: Updates metadata for a file in Drive.
 
 
 <a name="createFile"></a>
 # **createFile**
 > StorageObject createFile(xLusidDriveFilename, xLusidDrivePath, contentLength, body)
 
-[BETA] CreateFile: Uploads a file to Lusid Drive. If using an SDK, consider using the UploadAsStreamAsync function for larger files instead.
+[EARLY ACCESS] CreateFile: Uploads a file to Lusid Drive. If using an SDK, consider using the UploadAsStreamAsync function for larger files instead.
 
 ### Example
 ```java
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 # **deleteFile**
 > deleteFile(id)
 
-[BETA] DeleteFile: Deletes a file from Drive.
+[EARLY ACCESS] DeleteFile: Deletes a file from Drive.
 
 ### Example
 ```java
@@ -155,7 +155,7 @@ null (empty response body)
 # **downloadFile**
 > File downloadFile(id)
 
-[BETA] DownloadFile: Download the file from Drive.
+[EARLY ACCESS] DownloadFile: Download the file from Drive.
 
 ### Example
 ```java
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 # **getFile**
 > StorageObject getFile(id)
 
-[BETA] GetFile: Get a file stored in Drive.
+[EARLY ACCESS] GetFile: Get a file stored in Drive.
 
 ### Example
 ```java
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 # **updateFileContents**
 > StorageObject updateFileContents(id, contentLength, body)
 
-[BETA] UpdateFileContents: Updates contents of a file in Drive.
+[EARLY ACCESS] UpdateFileContents: Updates contents of a file in Drive.
 
 ### Example
 ```java
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 # **updateFileMetadata**
 > StorageObject updateFileMetadata(id, updateFile)
 
-[BETA] UpdateFileMetadata: Updates metadata for a file in Drive.
+[EARLY ACCESS] UpdateFileMetadata: Updates metadata for a file in Drive.
 
 ### Example
 ```java

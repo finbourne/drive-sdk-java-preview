@@ -4,14 +4,14 @@ All URIs are relative to *https://www.lusid.com/drive*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**search**](SearchApi.md#search) | **POST** /api/search | [BETA] Search: Search for a file or folder with a given name and path
+[**search**](SearchApi.md#search) | **POST** /api/search | [EARLY ACCESS] Search: Search for a file or folder with a given name and path
 
 
 <a name="search"></a>
 # **search**
 > PagedResourceListOfStorageObject search(searchBody, page, sortBy, limit, filter)
 
-[BETA] Search: Search for a file or folder with a given name and path
+[EARLY ACCESS] Search: Search for a file or folder with a given name and path
 
 ### Example
 ```java

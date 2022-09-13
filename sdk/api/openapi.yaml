@@ -6,7 +6,7 @@ info:
     url: https://www.finbourne.com
   termsOfService: https://www.finbourne.com/legal/terms-conditions
   title: FINBOURNE Drive API
-  version: 0.1.356
+  version: 0.1.391
   x-logo:
     url: https://www.lusid.com/app/assets/logo_white.png
     backgroundColor: '#415464'
@@ -138,11 +138,11 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] CreateFile: Uploads a file to Lusid Drive. If using an SDK,
-        consider using the UploadAsStreamAsync function for larger files instead.'
+      summary: '[EARLY ACCESS] CreateFile: Uploads a file to Lusid Drive. If using
+        an SDK, consider using the UploadAsStreamAsync function for larger files instead.'
       tags:
       - Files
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-contentType: application/octet-stream
       x-accepts: application/json
   /api/files/{id}:
@@ -184,10 +184,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] DeleteFile: Deletes a file from Drive.'
+      summary: '[EARLY ACCESS] DeleteFile: Deletes a file from Drive.'
       tags:
       - Files
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
     get:
       operationId: GetFile
@@ -273,10 +273,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] GetFile: Get a file stored in Drive.'
+      summary: '[EARLY ACCESS] GetFile: Get a file stored in Drive.'
       tags:
       - Files
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
     put:
       operationId: UpdateFileMetadata
@@ -372,10 +372,11 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] UpdateFileMetadata: Updates metadata for a file in Drive.'
+      summary: '[EARLY ACCESS] UpdateFileMetadata: Updates metadata for a file in
+        Drive.'
       tags:
       - Files
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-contentType: application/json
       x-accepts: application/json
   /api/files/{id}/contents:
@@ -454,10 +455,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] DownloadFile: Download the file from Drive.'
+      summary: '[EARLY ACCESS] DownloadFile: Download the file from Drive.'
       tags:
       - Files
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
     put:
       operationId: UpdateFileContents
@@ -560,10 +561,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] UpdateFileContents: Updates contents of a file in Drive.'
+      summary: '[EARLY ACCESS] UpdateFileContents: Updates contents of a file in Drive.'
       tags:
       - Files
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-contentType: application/octet-stream
       x-accepts: application/json
   /api/folders:
@@ -679,10 +680,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] GetRootFolder: List contents of root folder'
+      summary: '[EARLY ACCESS] GetRootFolder: List contents of root folder'
       tags:
       - Folders
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
     post:
       operationId: CreateFolder
@@ -766,10 +767,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] CreateFolder: Create a new folder in LUSID Drive'
+      summary: '[EARLY ACCESS] CreateFolder: Create a new folder in LUSID Drive'
       tags:
       - Folders
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-contentType: application/json
       x-accepts: application/json
   /api/folders/{id}:
@@ -823,10 +824,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] DeleteFolder: Delete a specified folder and all subfolders'
+      summary: '[EARLY ACCESS] DeleteFolder: Delete a specified folder and all subfolders'
       tags:
       - Folders
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
     get:
       operationId: GetFolder
@@ -924,10 +925,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] GetFolder: Get metadata of folder'
+      summary: '[EARLY ACCESS] GetFolder: Get metadata of folder'
       tags:
       - Folders
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
     post:
       operationId: MoveFolder
@@ -1039,10 +1040,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] MoveFolder: Move files to specified folder'
+      summary: '[EARLY ACCESS] MoveFolder: Move files to specified folder'
       tags:
       - Folders
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-contentType: application/json
       x-accepts: application/json
     put:
@@ -1152,10 +1153,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] UpdateFolder: Update an existing folder''s name, path'
+      summary: '[EARLY ACCESS] UpdateFolder: Update an existing folder''s name, path'
       tags:
       - Folders
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-contentType: application/json
       x-accepts: application/json
   /api/folders/{id}/contents:
@@ -1295,10 +1296,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] GetFolderContents: List contents of a folder'
+      summary: '[EARLY ACCESS] GetFolderContents: List contents of a folder'
       tags:
       - Folders
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
   /api/metadata/access/resources:
     get:
@@ -1423,10 +1424,11 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] Search: Search for a file or folder with a given name and path'
+      summary: '[EARLY ACCESS] Search: Search for a file or folder with a given name
+        and path'
       tags:
       - Search
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-contentType: application/json
       x-accepts: application/json
 components:
