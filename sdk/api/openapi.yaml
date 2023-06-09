@@ -6,7 +6,7 @@ info:
     url: https://www.finbourne.com
   termsOfService: https://www.finbourne.com/legal/terms-conditions
   title: FINBOURNE Drive API
-  version: 0.1.391
+  version: 0.1.528
   x-logo:
     url: https://www.lusid.com/app/assets/logo_white.png
     backgroundColor: '#415464'
@@ -34,7 +34,6 @@ paths:
         name: x-lusid-drive-filename
         required: true
         schema:
-          description: File name.
           maxLength: 256
           minLength: 1
           pattern: ^[A-Za-z0-9_\-\.]+[A-Za-z0-9_\-\. ]*$
@@ -46,7 +45,6 @@ paths:
         name: x-lusid-drive-path
         required: true
         schema:
-          description: File path.
           maxLength: 512
           minLength: 1
           pattern: ^[\/a-zA-Z0-9 \-_]+$
@@ -58,7 +56,6 @@ paths:
         name: Content-Length
         required: true
         schema:
-          description: The size in bytes of the file to be uploaded
           format: int32
           type: integer
         style: simple
@@ -117,7 +114,7 @@ paths:
                 statusDetail: ""
               schema:
                 $ref: '#/components/schemas/StorageObject'
-          description: Success
+          description: Created
         "400":
           content:
             text/plain:
@@ -155,7 +152,6 @@ paths:
         name: id
         required: true
         schema:
-          description: Identifier of the file to be deleted.
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -163,7 +159,7 @@ paths:
         style: simple
       responses:
         "204":
-          description: Success
+          description: No Content
         "400":
           content:
             text/plain:
@@ -198,7 +194,6 @@ paths:
         name: id
         required: true
         schema:
-          description: Identifier of the file to be retrieved.
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -287,7 +282,6 @@ paths:
         name: id
         required: true
         schema:
-          description: Identifier of the file to be updated
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -389,7 +383,6 @@ paths:
         name: id
         required: true
         schema:
-          description: Identifier of the file to be downloaded.
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -469,7 +462,6 @@ paths:
         name: id
         required: true
         schema:
-          description: The unique file identifier
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -481,7 +473,6 @@ paths:
         name: Content-Length
         required: true
         schema:
-          description: The size in bytes of the file to be uploaded
           format: int32
           type: integer
         style: simple
@@ -581,14 +572,8 @@ paths:
         name: page
         required: false
         schema:
-          description: "The pagination token to use to continue listing contents from\
-            \ a previous call to list contents.\r\n            This value is returned\
-            \ from the previous call. If a pagination token is provided the sortBy\
-            \ and filter fields\r\n            must not have changed since the original\
-            \ request. Also, if set, a start value cannot be provided."
           maxLength: 500
           minLength: 1
-          nullable: true
           pattern: ^[a-zA-Z0-9\+/]*={0,3}$
           type: string
         style: form
@@ -599,11 +584,8 @@ paths:
         name: sortBy
         required: false
         schema:
-          description: Order the results by these fields. Use use the '-' sign to
-            denote descending order.
           items:
             type: string
-          nullable: true
           type: array
         style: form
         x-nullable: true
@@ -613,9 +595,7 @@ paths:
         name: start
         required: false
         schema:
-          description: When paginating, skip this number of results.
           format: int32
-          nullable: true
           type: integer
         style: form
         x-nullable: true
@@ -626,10 +606,7 @@ paths:
         name: limit
         required: false
         schema:
-          description: When paginating, limit the number of returned results to this
-            many.
           format: int32
-          nullable: true
           type: integer
         style: form
         x-nullable: true
@@ -640,10 +617,8 @@ paths:
         required: false
         schema:
           default: "true"
-          description: Expression to filter the result set.
           maxLength: 16384
           minLength: 0
-          nullable: true
           pattern: ^[\s\S]*$
           type: string
         style: form
@@ -746,7 +721,7 @@ paths:
                 statusDetail: ""
               schema:
                 $ref: '#/components/schemas/StorageObject'
-          description: Success
+          description: Created
         "400":
           content:
             text/plain:
@@ -783,7 +758,6 @@ paths:
         name: id
         required: true
         schema:
-          description: Unique ID of the folder
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -791,7 +765,7 @@ paths:
         style: simple
       responses:
         "204":
-          description: Success
+          description: No Content
         "400":
           content:
             text/plain:
@@ -838,7 +812,6 @@ paths:
         name: id
         required: true
         schema:
-          description: Unique ID of the folder
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -939,7 +912,6 @@ paths:
         name: id
         required: true
         schema:
-          description: Unique ID of the folder where the files should be moved
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -953,8 +925,6 @@ paths:
         required: false
         schema:
           default: false
-          description: True if the destination has file with same name if should be
-            overwritten
           type: boolean
         style: form
         x-nullable: true
@@ -965,7 +935,6 @@ paths:
         required: false
         schema:
           default: false
-          description: If true after moving the original file is deleted
           type: boolean
         style: form
         x-nullable: true
@@ -977,7 +946,6 @@ paths:
             - FolderID2
             - FolderID3
             schema:
-              description: Enumerable of unique IDs of files that should be moved
               items:
                 type: string
               type: array
@@ -1055,7 +1023,6 @@ paths:
         name: id
         required: true
         schema:
-          description: Unique ID of the folder
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -1169,7 +1136,6 @@ paths:
         name: id
         required: true
         schema:
-          description: Unique ID of the folder
           maxLength: 40
           minLength: 30
           pattern: ^[a-zA-Z0-9\-]+$
@@ -1185,14 +1151,8 @@ paths:
         name: page
         required: false
         schema:
-          description: "The pagination token to use to continue listing contents from\
-            \ a previous call to list contents.\r\n            This value is returned\
-            \ from the previous call. If a pagination token is provided the sortBy\
-            \ and filter fields\r\n            must not have changed since the original\
-            \ request. Also, if set, a start value cannot be provided."
           maxLength: 500
           minLength: 1
-          nullable: true
           pattern: ^[a-zA-Z0-9\+/]*={0,3}$
           type: string
         style: form
@@ -1203,11 +1163,8 @@ paths:
         name: sortBy
         required: false
         schema:
-          description: Order the results by these fields. Use use the '-' sign to
-            denote descending order.
           items:
             type: string
-          nullable: true
           type: array
         style: form
         x-nullable: true
@@ -1217,9 +1174,7 @@ paths:
         name: start
         required: false
         schema:
-          description: When paginating, skip this number of results.
           format: int32
-          nullable: true
           type: integer
         style: form
         x-nullable: true
@@ -1230,10 +1185,7 @@ paths:
         name: limit
         required: false
         schema:
-          description: When paginating, limit the number of returned results to this
-            many.
           format: int32
-          nullable: true
           type: integer
         style: form
         x-nullable: true
@@ -1244,10 +1196,8 @@ paths:
         required: false
         schema:
           default: ""
-          description: Expression to filter the result set.
           maxLength: 16384
           minLength: 0
-          nullable: true
           pattern: ^[\s\S]*$
           type: string
         style: form
@@ -1344,7 +1294,6 @@ paths:
         schema:
           maxLength: 500
           minLength: 1
-          nullable: true
           pattern: ^[a-zA-Z0-9\+/]*={0,3}$
           type: string
         style: form
@@ -1355,7 +1304,6 @@ paths:
         schema:
           items:
             type: string
-          nullable: true
           type: array
         style: form
         x-nullable: true
@@ -1365,7 +1313,6 @@ paths:
         required: false
         schema:
           format: int32
-          nullable: true
           type: integer
         style: form
         x-nullable: true
@@ -1377,7 +1324,6 @@ paths:
           default: ""
           maxLength: 16384
           minLength: 0
-          nullable: true
           pattern: ^[\s\S]*$
           type: string
         style: form
@@ -1475,6 +1421,7 @@ components:
           relation: relation
       properties:
         description:
+          minLength: 1
           type: string
         action:
           $ref: '#/components/schemas/ActionId'
@@ -1619,6 +1566,7 @@ components:
           nullable: true
           type: string
         description:
+          minLength: 1
           type: string
         actions:
           items:
@@ -1707,10 +1655,13 @@ components:
           format: int32
           type: integer
         name:
+          minLength: 1
           type: string
         displayName:
+          minLength: 1
           type: string
         description:
+          minLength: 1
           type: string
         required:
           type: boolean
@@ -1749,7 +1700,7 @@ components:
         actions:
           items:
             $ref: '#/components/schemas/ActionId'
-          minLength: 1
+          minItems: 1
           type: array
         name:
           maxLength: 100
@@ -1792,6 +1743,7 @@ components:
       additionalProperties: false
       properties:
         name:
+          minLength: 1
           type: string
         errorDetails:
           items:
@@ -1819,13 +1771,6 @@ components:
         instance:
           nullable: true
           type: string
-        extensions:
-          additionalProperties:
-            additionalProperties: false
-            type: object
-          nullable: true
-          readOnly: true
-          type: object
       required:
       - code
       - name
@@ -1834,6 +1779,7 @@ components:
       additionalProperties: false
       properties:
         name:
+          minLength: 1
           type: string
         errorDetails:
           items:
@@ -1868,13 +1814,6 @@ components:
         instance:
           nullable: true
           type: string
-        extensions:
-          additionalProperties:
-            additionalProperties: false
-            type: object
-          nullable: true
-          readOnly: true
-          type: object
       required:
       - code
       - name
@@ -2298,6 +2237,7 @@ components:
           type: string
         createdBy:
           description: Identifier of the user who created the file or folder
+          minLength: 1
           type: string
         createdOn:
           description: Date of file/folder creation
@@ -2305,6 +2245,7 @@ components:
           type: string
         updatedBy:
           description: Identifier of the last user to modify the file or folder
+          minLength: 1
           type: string
         updatedOn:
           description: Date of file/folder modification
@@ -2312,6 +2253,7 @@ components:
           type: string
         type:
           description: Type of storage object (file or folder)
+          minLength: 1
           type: string
         size:
           description: Size of the file in bytes
