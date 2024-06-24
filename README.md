@@ -1,10 +1,11 @@
+![LUSID_by_Finbourne](./resources/Finbourne_Logo_Teal.svg)
+
 # Deprecated
 
 Please note that this repository is deprecated and will be archived early 2024.
 
 All functionality is now contained, in the [drive-sdk-java](https://github.com/finbourne/drive-sdk-java) repository on the `main` branch.
 
-![LUSID_by_Finbourne](https://content.finbourne.com/LUSID_repo.png)
 
 
 # LUSID<sup>®</sup> Drive Java SDK Preview
